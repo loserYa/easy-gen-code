@@ -1,0 +1,12 @@
+# 生成到当前项目的那个子模块,没有则配置 /
+module: /gen-code-demo/
+
+# 模板文件和生成类的映射关系 多个文件 数组形式配置
+mappers:
+  -
+  - fileId: 001
+    template: genCode/template/Entity.java.vm
+    # 生成到 src.main.java 下的对应包中
+    packageName: com.loser.${module}
+    name: ${entity}
+    ext: java
